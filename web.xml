@@ -1,0 +1,7 @@
+public void doGet(HttpServletRequest req, HttpServletResponse resp)
+        throws IOException {
+    if (req.getRequestURL().toString().startsWith ("http://1-dot-")) {
+        resp.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
+        resp.setHeader("Location", "[my custom domain]");
+    }
+} 
