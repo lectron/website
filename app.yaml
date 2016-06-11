@@ -6,10 +6,9 @@ threadsafe: false
 
 handlers:
 - url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
-- url: /(.+\.php)$
-  script: \1
+  static_files: public/favicon.ico
+  upload: public/favicon\.ico
+
 - url: /.*
-  script: public/index.php
+  script: index.php
   secure: optional
