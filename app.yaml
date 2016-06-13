@@ -8,6 +8,14 @@ handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+  
+- url: /apple-icon\.png
+  static_files: apple-icon.png
+  upload: apple-icon\.png
+  
+- url: /apple-icon-precomposed\.png
+  static_files: apple-icon-precomposed.png
+  upload: apple-icon-precomposed\.png
 
 - url: /
   static_files: index.html
