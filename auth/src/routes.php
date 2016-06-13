@@ -4,10 +4,9 @@
 use PublicUHC\PhpYggdrasil\DefaultYggdrasil;
 
 $app->post('/auth/login', function ($request, $response, $args) {
-    $params = $request->getQueryParams();
-    if (isset($params['username']) && isset($params['password'])) {
-        $yggdrasil = new DefaultYggdrasil($params['username']);
-        $reponse = $yggdrasil->authenticate($params['password']);
+    if ($request->getParam('username') && $request->getParam('password')) {
+        $yggdrasil = new DefaultYggdrasil($request->getParam('username'));
+        $reponse = $yggdrasil->authenticate($request->getParam('password'));
         $clientToken = $yggdrasil->getClientToken();
         $accessToken = $yggdrasil->getAccessToken();
         if ($accessToken) {
@@ -20,11 +19,10 @@ $app->post('/auth/login', function ($request, $response, $args) {
 });
 
 $app->post('/auth/logout', function ($request, $response, $args) {
-    $params = $request->getQueryParams();
-    if (isset($params['accessToken']) && isset($params['clientToken'])) {
+    if ($request->getParam('accessToken') && $request->getParam('clientToken')) {
         $yggdrasil = new DefaultYggdrasil();
-        $yggdrasil->setAccessToken($params['accessToken']);
-        $yggdrasil->setClientToken($params['clientToken']);
+        $yggdrasil->setAccessToken($request->getParam('accessToken'));
+        $yggdrasil->setClientToken($request->getParam('clientToken'));
         $response = $yggdrasil->invalidate();
         if ($response == true) {
             return json_encode(1);
