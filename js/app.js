@@ -122,7 +122,7 @@ angular.module('MinecraftlyApp', deps)
                     })
 			.state('app.404', {
                         cache: false,
-                        url: "/404.html",
+                        url: "/404",
                         views: {
                             'appContent': {
                                 templateUrl: "templates/404.html",
