@@ -1,0 +1,33 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+</head>
+
+<script>
+$(document).ready(function () {
+    var interval = 10000;   //number of mili seconds between each call
+    var refresh = function() {
+    $.getJSON("https://mcapi.ca/query/m.ly/players",function(json){
+          if (json.status !== true) {
+            // error
+            $("#players .p1").text('The server is Offline').addClass('server-error');
+        } else {
+            // success
+            $("#players .p1").text('There are');
+            $("#players .p2").text('players online');
+            $(".player-count").html(json.players.online);
+            setTimeout(function(){ $('.player-count').removeClass('zoomIn').addClass('zoomOut') }, 14350); 
+            setTimeout(function(){ $('.player-count').removeClass('zoomOut').addClass('zoomIn') }, 0);
+        }
+    });
+    setTimeout(function() {
+        refresh();
+            },
+        interval);
+            }
+        refresh();
+});
+</script>
+
+<body>
+  <h1>There are <span class="player-count" style="color:#0091ea;font-weight:bold"></span> players online right now!</h1>
+</body>

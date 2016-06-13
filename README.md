@@ -1,2 +1,2 @@
-# api
-API for Minecraftly website login via Mojang's Yggdrasil authentication
+# minecraftly.github.io
+Source for minecraftly.com

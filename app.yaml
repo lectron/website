@@ -6,9 +6,82 @@ threadsafe: false
 
 handlers:
 - url: /favicon\.ico
-  static_files: public/favicon.ico
-  upload: public/favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
 
-- url: /.*
-  script: index.php
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /js
+  static_dir: js
+
+- url: /css
+  static_dir: css
+
+- url: /vendor
+  static_dir: vendor
+
+- url: /images
+  static_dir: images
+
+- url: /templates/app.html
+  static_files: templates/app.html
+  upload: templates/app.html
+  
+- url: /templates/home.html
+  static_files: templates/home.html
+  upload: templates/home.html
+  
+- url: /templates/about.html
+  static_files: templates/about.html
+  upload: templates/about.html
+  
+- url: /templates/team.html
+  static_files: templates/team.html
+  upload: templates/team.html
+  
+- url: /templates/education.html
+  static_files: templates/education.html
+  upload: templates/education.html
+  
+- url: /templates/features.html
+  static_files: templates/features.html
+  upload: templates/features.html
+  
+- url: /templates/jobs.html
+  static_files: templates/jobs.html
+  upload: templates/jobs.html
+  
+- url: /templates/play.html
+  static_files: templates/play.html
+  upload: templates/play.html
+  
+- url: /templates/privacy.html
+  static_files: templates/privacy.html
+  upload: templates/privacy.html
+  
+- url: /templates/login.html
+  static_files: templates/login.html
+  upload: templates/login.html
+  
+- url: /templates/terms.html
+  static_files: templates/terms.html
+  upload: templates/terms.html
+  
+- url: /templates/vote.html
+  static_files: templates/vote.html
+  upload: templates/vote.html
+
+- url: /templates/.*
+  static_files: templates/404.html
+  upload: templates/404.html
+  
+- url: /auth/.*
+  script: auth/index.php
   secure: optional
+  
+- url: /(.*)
+  static_files: \1
+  upload: (.*)
+  

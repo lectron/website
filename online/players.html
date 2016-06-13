@@ -1,0 +1,30 @@
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="portal">
+		<span id="on">
+			Loading Server Status...
+		</span>
+	</div>
+	<div>
+		<script>
+			$(function(){
+				$('body').prepend($('#portal'));
+			});
+
+			var ip = "m.ly";
+			function ping(ip) {
+				$('#on').hide();
+				$.getJSON("https://mcapi.us/server/status?ip=" + ip, function(json){
+					if(json.online !== "false") {
+						$("#on").html("There are <b>"+json.players.now+"</b> players online").fadeIn('fast');
+					} else {
+						$("#on").html("Server is Currently Offline").fadeIn('fast');
+					}
+				});
+			}ping(ip);
+		</script>
+	</div>
+</body>
