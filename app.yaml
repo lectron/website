@@ -86,10 +86,10 @@ handlers:
   upload: templates/404.html
   
 - url: /auth/.*
-  script: auth/index.php
+  script: auth/public/index.php
   secure: optional
   
-- url: /(.*)
-  static_files: \1
-  upload: (.*)
+- url: /.*
+  static_files: index.html
+  upload: index.html
   
