@@ -1,7 +1,7 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
-require_once 'vendor/autoload.php';
+require_once 'auth/autoload.php';
 
 use Phroute\Phroute\RouteCollector;
 use PublicUHC\PhpYggdrasil\DefaultYggdrasil;
