@@ -32,54 +32,9 @@ handlers:
 
 - url: /images
   static_dir: images
-
-- url: /templates/app.html
-  static_files: templates/app.html
-  upload: templates/app.html
   
-- url: /templates/home.html
-  static_files: templates/home.html
-  upload: templates/home.html
-  
-- url: /templates/about.html
-  static_files: templates/about.html
-  upload: templates/about.html
-  
-- url: /templates/team.html
-  static_files: templates/team.html
-  upload: templates/team.html
-  
-- url: /templates/education.html
-  static_files: templates/education.html
-  upload: templates/education.html
-  
-- url: /templates/features.html
-  static_files: templates/features.html
-  upload: templates/features.html
-  
-- url: /templates/jobs.html
-  static_files: templates/jobs.html
-  upload: templates/jobs.html
-  
-- url: /templates/play.html
-  static_files: templates/play.html
-  upload: templates/play.html
-  
-- url: /templates/privacy.html
-  static_files: templates/privacy.html
-  upload: templates/privacy.html
-  
-- url: /templates/login.html
-  static_files: templates/login.html
-  upload: templates/login.html
-  
-- url: /templates/terms.html
-  static_files: templates/terms.html
-  upload: templates/terms.html
-  
-- url: /templates/vote.html
-  static_files: templates/vote.html
-  upload: templates/vote.html
+- url: /templates
+  static_dir: templates
 
 - url: /templates/.*
   static_files: templates/404.html
