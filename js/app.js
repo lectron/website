@@ -130,6 +130,16 @@ angular.module('MinecraftlyApp', deps)
                             }
                         }
                     })
+			.state('app.login', {
+                        cache: false,
+                        url: "/login",
+                        views: {
+                            'appContent': {
+                                templateUrl: "templates/in.html",
+                                controller: 'mainController'
+                            }
+                        }
+                    })
 		    .state('app.features', {
                         cache: false,
                         url: "/features",
