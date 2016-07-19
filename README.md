@@ -1,15 +1,7 @@
-# Minecraftly Website
+# minecraftly.github.io
 Source for minecraftly.com
 
 ====
 
-## Hosting
+## hosting
 Google App Engine
-
-## Design
-Material Design Lite
-Angular Material
-
-## Dynamic intergration upon login
-Intercom
-
