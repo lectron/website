@@ -67,7 +67,7 @@ angular.module('MinecraftlyAppControllers')
 
                         };
                     },
-                    templateUrl: 'templates/login.html',
+                    templateUrl: 'templates/login-popup.html',
                     parent: angular.element(document.body),
                     targetEvent: ev,
                     clickOutsideToClose: true,

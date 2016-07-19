@@ -1,4 +1,4 @@
-var deps = [
+var dependencies = [
     'ui.router',
     'ngAnimate',
     'ngMaterial',
@@ -10,18 +10,11 @@ var deps = [
 ];
 angular.module("MinecraftlyAppControllers", []);
 angular.module("MinecraftlyAppServices", []);
-angular.module('MinecraftlyApp', deps)
+angular.module('MinecraftlyApp', dependencies)
         .run(function ($window) {
         })
-        .config(function ($stateProvider, $locationProvider, $urlRouterProvider, IntercomProvider) {// $mdThemingProvider, $mdIconProvider, 
+        .config(function ($stateProvider, $locationProvider, $urlRouterProvider, IntercomProvider) {
             IntercomProvider.init('t02jhyr0');
-//            $mdThemingProvider.theme('MinecraftlyTheme')
-//                    .primaryPalette('blue')
-//                    .accentPalette('purple')
-//                    .warnPalette('deep-purple');
-//            $mdThemingProvider.setDefaultTheme('MinecraftlyTheme');
-//            $mdIconProvider
-//                    .defaultIconSet('/img/mdi.svg');
             $locationProvider.html5Mode(true);
             $stateProvider
                     .state('app', {
@@ -120,12 +113,22 @@ angular.module('MinecraftlyApp', deps)
                             }
                         }
                     })
-			.state('app.404', {
+			.state('app.login', {
                         cache: false,
-                        url: "/404",
+                        url: "/login",
                         views: {
                             'appContent': {
-                                templateUrl: "templates/404.html",
+                                templateUrl: "templates/login.html",
+                                controller: 'mainController'
+                            }
+                        }
+                    })
+			.state('app.faq', {
+                        cache: false,
+                        url: "/faq",
+                        views: {
+                            'appContent': {
+                                templateUrl: "templates/faq.html",
                                 controller: 'mainController'
                             }
                         }

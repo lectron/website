@@ -1,30 +1,27 @@
-<md-dialog>
-    <md-toolbar>
-        <div class="md-toolbar-tools">
-            <h2>Login using your <a href="https://account.mojang.com/" target="_blank">Mojang</a> account</h2>
-            <span flex></span>
-            <md-button class="md-icon-button" ng-click="cancel()">
-                <md-icon md-font-set="material-icons"> close </md-icon>
-            </md-button>
-        </div>
-    </md-toolbar>
-    <md-dialog-content class="md-dialog-content">
-        <form ng-submit='login()'>
+    <div class="page-content">
+	
+		<div style="text-align: center; padding-left: 15%; padding-right: 15%;">
+			<div ng-cloak>
+				<md-content>
+						<md-dialog-content class="md-dialog-content">
+							<form ng-submit='login()'>
 
-            <md-input-container class="md-block">
-                <label>Email</label>
-                <input ng-model="user.email" type="email" required>
-            </md-input-container>
-            <md-input-container class="md-block">
-                <label>Password</label>
-                <input ng-model="user.password" type="password" required>
-            </md-input-container>
+								<md-input-container class="md-block">
+									<label>Email</label>
+									<input ng-model="user.email" type="email" name="username" id="username" required>
+								</md-input-container>
+								<md-input-container class="md-block">
+									<label>Password</label>
+									<input ng-model="user.password" type="password" name="password" id="password" required>
+								</md-input-container>
 
-        </form>
-    </md-dialog-content>
-    <md-dialog-actions layout="row">
-        <md-button  class="md-raised md-ink-ripple" ng-click="cancel()">Cancel</md-button>
-        <span flex></span>
-        <md-button  class="md-accent md-raised md-ink-ripple" ng-click="login()">Login</md-button>
-    </md-dialog-actions>
-</md-dialog>
+							</form>
+						</md-dialog-content>
+						<md-dialog-actions layout="row">
+							<md-button  class="md-accent md-raised md-ink-ripple" ng-click="login()">Login</md-button>
+						</md-dialog-actions>
+				</md-content>
+			</div>
+		</div>
+		
+	</div>
