@@ -35,6 +35,10 @@ handlers:
   
 - url: /templates
   static_dir: templates
+
+- url: /templates/.*
+  static_files: templates/404.html
+  upload: templates/404.html
   
 - url: /auth/.*
   script: auth/public/index.php
