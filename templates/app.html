@@ -47,6 +47,8 @@
 
 
 <div flex layout="column">
+    <md-progress-linear ng-show="$storage.loading == 1" md-mode="indeterminate"></md-progress-linear>
+	
     <md-toolbar class="mdl-color--blue mdl-button--raised">
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Settings" ng-click="openMenu()">
@@ -84,7 +86,6 @@
         </div>
     </md-toolbar>
 
-    <md-progress-linear ng-show="$storage.loading == 1" md-mode="indeterminate"></md-progress-linear>
 
     <md-content layout="column" flex>
         <ui-view name="appContent">
@@ -114,7 +115,7 @@
                 </ul>
             </div>  	
             <div class="mdl-mega-footer__drop-down-section">
-                <h1 class="mdl-mega-footer__heading">FAQ</h1>
+                <h1 class="mdl-mega-footer__heading">Useful</h1>
                 <ul class="mdl-mega-footer__link-list">
                     <li><a href="https://github.com/minecraftly/minecraftly/" target="_blank">GitHub</a></li>
                     <li><a href="https://github.com/minecraftly/minecraftly/wiki" target="_blank">Wiki</a></li>

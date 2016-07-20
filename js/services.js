@@ -3,7 +3,7 @@ angular.module('MinecraftlyAppServices')
         {
             var APIFactory = {};
             APIFactory.url = '/auth/';
-            //APIFactory.url = '//localhost:8000/';
+            //APIFactory.url = '//localhost:8080/';
             APIFactory.login = function (username, password)
             {
                 return $http.post(APIFactory.url + "login", {'username': username, 'password': password});

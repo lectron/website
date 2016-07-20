@@ -2,7 +2,6 @@ var dependencies = [
     'ui.router',
     'ngAnimate',
     'ngMaterial',
-    'mdl',
     'ngIntercom',
     'ngStorage',
     'MinecraftlyAppControllers',
