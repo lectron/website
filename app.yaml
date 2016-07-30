@@ -41,14 +41,6 @@ handlers:
   script: paywithatweet.php
   secure: optional
   
-- url: /u/.*
-  script: u/index.php
-  secure: optional
-
-- url: /@.*
-  script: u/index.php
-  secure: optional
-  
 - url: /.*
   static_files: index.html
   upload: index.html
