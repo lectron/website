@@ -141,12 +141,12 @@ angular.module('MinecraftlyApp', dependencies)
                     }
                 }
             })
-            .state('app.profile', {
+            .state('app.uuid', {
                 cache: false,
-                url: "/u/:username",
+                url: "/:username",
                 views: {
                     'appContent': {
-                        templateUrl: "templates/profile.html",
+                        templateUrl: "templates/uuid.html",
                         controller: 'profileController'
                     }
                 }
