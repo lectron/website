@@ -3,7 +3,6 @@ angular.module('MinecraftlyAppServices')
             var APIFactory = {};
             APIFactory.url = '/auth/';
             APIFactory.convertUrl = '/auth/convert';
-            //APIFactory.url = '//localhost:8080/';
             APIFactory.login = function (username, password) {
                 return $http.post(APIFactory.url + "login", {
                     'username': username,
@@ -12,9 +11,11 @@ angular.module('MinecraftlyAppServices')
             };
             APIFactory.convertUUIDToNames = function (uuid) {
                 return $http.get(APIFactory.convertUrl, {
-                    'uuid': uuid
+                    params: {
+                        'uuid': '12345'
+                    }
                 });
-            }
+            };
             return APIFactory;
 
         });
