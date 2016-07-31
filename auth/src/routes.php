@@ -33,7 +33,7 @@ $app->post('/auth/logout', function ($request, $response, $args) {
     return json_encode(0);
 });
 
-$app->get('/convert', function($request, $response, $args) {
+$app->get('/auth/convert', function($request, $response, $args) {
     if ($request->getParam('uuid')) {
         $convertURL = "https://api.mojang.com/user/profiles/";
         $convertURL.= $request->getParam('uuid');
