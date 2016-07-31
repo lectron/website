@@ -12,7 +12,7 @@ angular.module('MinecraftlyAppServices')
             APIFactory.convertUUIDToNames = function (uuid) {
                 return $http.get(APIFactory.convertUrl, {
                     params: {
-                        'uuid': '12345'
+                        'uuid': uuid
                     }
                 });
             };
