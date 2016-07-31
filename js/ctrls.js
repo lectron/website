@@ -124,7 +124,7 @@ angular.module('MinecraftlyAppControllers')
         .controller('loginController', function ($scope, $state, $localStorage, API, $mdDialog, Intercom, $mdToast) {
             $scope.$on('$viewContentLoaded', function (event, data) {
                 if ($localStorage.loggedIn == 1) {
-                    $state.go('app.home');
+                        $state.go('app.uuid', {username: $localStorage.user.uuid});
                 }
             });
             $scope.user = {};
@@ -151,7 +151,7 @@ angular.module('MinecraftlyAppControllers')
                                 .position('bottom right')
                                 .hideDelay(3000)
                                 );
-                        $state.go('app.uuid',{username: $localStorage.user.uuid});
+                        $state.go('app.uuid', {username: $localStorage.user.uuid});
                     } else {
                         $mdDialog.show(
                                 $mdDialog.alert()
