@@ -113,8 +113,8 @@ angular.module('MinecraftlyAppControllers')
         })
         .controller('profileController', function ($scope, $stateParams, API) {
             $scope.uuid = $stateParams.uuid;
-            API.convertUUIDToNames($stateParams.uuid).then(function (data) {
-		console.log(data);
+            API.convertUUIDToNames($stateParams.uuid).then(function (response) {
+				data = response.data;
                 if (data.length > 0) {
                     $scope.name = data[data.length - 1].name;
                 } else {
