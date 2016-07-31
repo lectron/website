@@ -12,7 +12,7 @@ $app->post('/auth/login', function ($request, $response, $args) {
         if ($accessToken) {
             return json_encode($reponse);
         } else {
-
+            
         }
     }
     return json_encode(['error' => 'login_failed', 'availableProfiles' => []]);
@@ -33,12 +33,13 @@ $app->post('/auth/logout', function ($request, $response, $args) {
     return json_encode(0);
 });
 
-$app->get('/convert',function($request,$response,$args){
-  if($request->getParam('username')){
-    $convertURL = "https://api.mojang.com/users/profiles/minecraft/";
-    $convertURL .=$request->getParam('username');
-    $data = file_get_contents($convertURL);
-    return json_encode($data);
-  }
-  return json_encode(0);
+$app->get('/convert', function($request, $response, $args) {
+    if ($request->getParam('uuid')) {
+        $convertURL = "https://api.mojang.com/user/profiles/";
+        $convertURL.= $request->getParam('uuid');
+        $convertURL.= "/names";
+        $data = file_get_contents($convertURL);
+        return json_encode($data);
+    }
+    return json_encode(0);
 });

@@ -112,10 +112,12 @@ angular.module('MinecraftlyAppControllers')
 
         })
         .controller('profileController', function ($scope, $stateParams, API) {
-            $scope.username = $stateParams.username;
-            API.convertUsernameToUUID($stateParams.username).then(function (data) {
-                if (data.id) {
-                    $scope.UUID = data.id;
+            $scope.uuid = $stateParams.uuid;
+            API.convertUUIDToNames($stateParams.uuid).then(function (data) {
+                if (data.length > 0) {
+                    $scope.name = data[data.length - 1].name;
+                } else {
+                    $scope.name = "Unknown";
                 }
             }, function (r) {
                 console.log(r);
@@ -124,7 +126,7 @@ angular.module('MinecraftlyAppControllers')
         .controller('loginController', function ($scope, $state, $localStorage, API, $mdDialog, Intercom, $mdToast) {
             $scope.$on('$viewContentLoaded', function (event, data) {
                 if ($localStorage.loggedIn == 1) {
-                        $state.go('app.uuid', {username: $localStorage.user.uuid});
+                    $state.go('app.uuid', {username: $localStorage.user.uuid});
                 }
             });
             $scope.user = {};
