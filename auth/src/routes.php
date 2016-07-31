@@ -39,7 +39,7 @@ $app->get('/auth/convert', function($request, $response, $args) {
         $convertURL.= $request->getParam('uuid');
         $convertURL.= "/names";
         $data = file_get_contents($convertURL);
-        return json_encode($data);
+        return $data;
     }
     return json_encode(0);
 });
