@@ -151,7 +151,7 @@ angular.module('MinecraftlyAppControllers')
                                 .position('bottom right')
                                 .hideDelay(3000)
                                 );
-                        $state.go('app.home');
+                        $state.go('app.uuid',{username: $localStorage.user.uuid});
                     } else {
                         $mdDialog.show(
                                 $mdDialog.alert()
