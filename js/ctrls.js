@@ -121,7 +121,7 @@ angular.module('MinecraftlyAppControllers')
                 console.log(r);
             });
         })
-        .controller('loginController', function ($scope, $state, $localStorage, API, $mdDialog, Intercom) {
+        .controller('loginController', function ($scope, $state, $localStorage, API, $mdDialog, Intercom, $mdToast) {
             $scope.$on('$viewContentLoaded', function (event, data) {
                 if ($localStorage.loggedIn == 1) {
                     $state.go('app.home');
