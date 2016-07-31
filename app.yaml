@@ -1,8 +1,8 @@
 application: minecraft-ly
-version: 0
+version: 20160731-5
 runtime: php55
 api_version: 1
-threadsafe: false
+threadsafe: true
 
 handlers:
 - url: /favicon\.ico
