@@ -1,5 +1,5 @@
 application: minecraft-ly
-version: 20160731-5
+version: 20160801-12
 runtime: php55
 api_version: 1
 threadsafe: true
@@ -8,40 +8,43 @@ handlers:
 - url: /favicon\.ico
   static_files: images/favicon.ico
   upload: favicon\.ico
-  
+
 - url: /apple-icon\.png
   static_files: images/apple-icon.png
   upload: apple-icon\.png
-  
+
 - url: /apple-icon-precomposed\.png
   static_files: images/apple-icon-precomposed.png
   upload: apple-icon-precomposed\.png
 
-- url: /
-  static_files: index.html
-  upload: index.html
-
 - url: /js
   static_dir: js
+  mime_type: text/javascript
 
 - url: /css
   static_dir: css
 
 - url: /images
   static_dir: images
-  
-- url: /templates
-  static_dir: templates
-  
+
 - url: /auth/.*
   script: auth/public/index.php
   secure: optional
-  
-- url: /paywithatweet
-  script: paywithatweet.php
-  secure: optional
-  
-- url: /.*
+
+- url: /
+  mime_type: text/html
   static_files: index.html
   upload: index.html
-  
+  expiration: "0m"
+
+- url: /templates/(.*\.html)
+  mime_type: text/html
+  static_files: templates/\1
+  upload: templates/(.*\.html)
+  expiration: "0m"
+
+- url: /.*
+  mime_type: text/html
+  static_files: index.html
+  upload: index.html
+  expiration: "0m"
