@@ -1,5 +1,5 @@
 application: minecraft-ly
-version: 20160801-12
+version: 20160801-14
 runtime: php55
 api_version: 1
 threadsafe: true
@@ -21,8 +21,10 @@ handlers:
   static_dir: js
   mime_type: text/javascript
 
-- url: /css
-  static_dir: css
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: static/\1
+  upload: static/(.*\.css)
 
 - url: /images
   static_dir: images
