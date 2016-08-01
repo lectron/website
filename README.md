@@ -7,6 +7,6 @@ Source for https://minecraftly.com
 Google App Engine
 
 ## stack
-AngularJS
-Angular Material
-PHP
+- AngularJS
+- Angular Material
+- PHP
