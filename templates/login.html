@@ -1,7 +1,8 @@
-<div layout="column" layout-align="center center" layout-fill="layout-fill">
-    <div layout="column" class="loginBox ">
+<div layout="column" layout-align="center center" layout-fill="layout-fill">	
+	<div layout="column" class="loginBox ">
 	<form ng-submit="login()">
-		<md-content layout="column" class="md-padding">
+		<md-content layout="column" class="md-padding" ng-show="$storage.loggedIn == 0">
+			<h5>Login with your Minecraft/Mojang account</h5>
 		    <md-input-container>
 		        <label>Email Address</label>
 		        <input type="email" ng-model="user.email"/>
@@ -10,9 +11,12 @@
 		        <label>Password</label>
 		        <input type="password" ng-model="user.password"/>
 		    </md-input-container>
-		    <div layout="row" layout-align="center center" style="padding-top:20px;">
-		        <md-button class="md-raised md-primary" ng-click="login()" type="submit">Login</md-button>
+		    <div layout="row" layout-align="center center">
+		        <md-button class="md-primary md-raised" ng-click="login()" type="submit">Login</md-button>
 		    </div>
+		</md-content>
+		<md-content layout="column" class="md-padding" ng-show="$storage.loggedIn !== 0">
+			<h5>You are now logged in :)</h5>
 		</md-content>
 	</form>
     </div>

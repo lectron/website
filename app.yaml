@@ -1,34 +1,27 @@
 application: minecraft-ly
-version: 20160801-14
+version: 20160801-25
 runtime: php55
 api_version: 1
 threadsafe: true
+inbound_services:
+- warmup
 
 handlers:
-- url: /favicon\.ico
-  static_files: images/favicon.ico
-  upload: favicon\.ico
-
-- url: /apple-icon\.png
-  static_files: images/apple-icon.png
-  upload: apple-icon\.png
-
-- url: /apple-icon-precomposed\.png
-  static_files: images/apple-icon-precomposed.png
-  upload: apple-icon-precomposed\.png
-
-- url: /js
-  static_dir: js
-  mime_type: text/javascript
-
 - url: /(.*\.css)
   mime_type: text/css
   static_files: static/\1
   upload: static/(.*\.css)
 
-- url: /images
-  static_dir: images
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: static/\1
+  upload: static/(.*\.js)
 
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png|gif))
+  static_files: static/\1
+  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png|gif))
+  
 - url: /auth/.*
   script: auth/public/index.php
   secure: optional

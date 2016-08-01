@@ -5,33 +5,33 @@
 				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
 					<h1><font color="#fff"><strong>Bigger than Earth</strong></font></h1>
 					
-					<p><a ui-sref="app.login"><md-button class="md-accent md-raised">PLAY FOR FREE</md-button></a></p>
-					
+					<p><a ui-sref="app.login"><md-button class="md-accent md-raised" ng-show="$storage.loggedIn == 0">PLAY FOR FREE</md-button></a></p>
+					<p><a ui-sref="app.vote"><md-button class="md-accent md-raised" ng-show="$storage.loggedIn !== 0">VOTE FOR US</md-button></a></p>
+
 					<p style="font-size: 24px; line-height: 1.5em; color: #EEEEEE;">The largest single continuous virtual universe ever made.</p>
 					<p style="font-size: 24px; line-height: 1.5em; color: #EEEEEE;">Claim your own Minecraft world inside this universe. It only takes 1 second. Play with many others across the same universe in real time.</p>
 					<!-- <p style="font-size: 22px; line-height: 1.5em; color: #EEEEEE;">People can go to your world via your <b><font color="#FAFAFA">username.m.ly</font></b>, or a custom domain name that you choose.</p>
 					<p style="font-size: 24px; line-height: 1.5em; color: #EEEEEE;">Join now with <span class="player-count"></span> players online!</p> -->
 				</div>
 				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet graybox">
-					<img class="mdl-button--raised" style='border:2px solid #E3F2FD' src="//i.giphy.com/l0HlzBk9Z9Ojb9Dqg.gif" width="100%"></img>
+					<img style='border:1px solid #E3F2FD' src="//i.giphy.com/l0HlzBk9Z9Ojb9Dqg.gif" width="100%"></img>
 				</div>
 
-				<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet graybox">
+				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet graybox">
 					<img src="//i.imgur.com/t0RQYdi.png" width="100%"></img>
 				</div>
-				<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet graybox">
-					<h3 style="color: #FAFAFA;">Creating your Minecraft world online shouldn't be an uphill struggle...</h3>
-					<p style="font-size: 24px; line-height: 1.5em; color: #E0E0E0;">... but a quick, easy and fun process. Minecraftly is a way for you to quickly get an online Minecraft world for free, play with friends, and build your own community.</p>
-					<p style="font-size: 24px; line-height: 1.5em; color: #E0E0E0;">In a way, it's like a personal server within a server, with your own server web page, and no learning curve needed.</p>
+				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
+					<h3 style="color: #FAFAFA;">Playing Minecraft online with your friends shouldn't be an uphill struggle...</h3>
+					<p style="font-size: 24px; line-height: 1.5em; color: #E0E0E0;">... but a quick, easy and fun process. Minecraftly takes all of the complex steps of hosting it online into one single step. Your world is already here, waiting for your exploration.</p>
 				</div>
 
-				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
+				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet graybox">
 					<h3 style="color:#FAFAFA">Forget About Infrastructure</h3>
 					<p style="font-size: 25px; line-height: 1.5em; color: #E0E0E0;">Stop wasting money on low quality hosting. Stop wasting time on installing complex softwares.</p>
 					<p style="font-size: 25px; line-height: 1.5em; color: #E0E0E0;">We take care of everything for you, all you need to do is play!</p>
 				</div>
-				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet graybox">
-					<img src="//pre00.deviantart.net/bc88/th/pre/i/2014/086/3/c/corefire___fa___by_crystalwolfxx-d7br08x.png" width="100%"></img>
+				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
+					<img src="//orig11.deviantart.net/aae4/f/2012/099/0/a/run_steve__run__by_endernoir-d4vn0a5.png" width="100%"></img>
 				</div>
 			</div>
 		</div>
@@ -45,11 +45,6 @@
 					<h3>Custom Domain</h3>
 					<p style="font-size: 24px; line-height: 1.5em;"><font color="#616161">Besides from using our built in address <font color="#000">subdomain.m.ly</font>, you can also map your own domain name for free.</font></p>
 					<p style="font-size: 24px; line-height: 1.5em;"><font color="#616161">For example, if you want to set <font color="#000">mc.example.com</font> as your server address, simply add a CNAME record mapped to <font color="#000">your-Minecraft-UUID.m.ly</font></font></p>
-					<p>
-						<a ui-sref="app.cname">
-							<md-button class="md-primary md-raised">LEARN MORE</md-button>
-						</a>
-					</p>
 				</div>
 
 				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
@@ -62,12 +57,12 @@
 				</div>
 
 				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
-					<img src="//orig05.deviantart.net/1144/f/2012/240/b/f/minetrophy_by_ddant1100-d5cqjoz.gif" width="100%"></img>
+					<img src="//pre13.deviantart.net/f3e4/th/pre/i/2014/262/1/f/blue__contest_entry_by_gameaddict1234-d7zpdb8.png" width="100%"></img>
 				</div>
 				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet graybox">
 					<h3>Our Technology</h3>
-					<p style="font-size: 24px; line-height: 1.5em; color: #616161;">The challenge is to handle situations when thousands of players will gather in tight spaces, like in a world, or a chunk and to do this without interrupting the gameplay.</p>
-					<p style="font-size: 24px; line-height: 1.5em; color: #616161;">To handle potentially millions of players simultaneously online at the same time, we have developed our own technology. Server nodes are assigned to regions that are more densely populated, and these change the frequency of updates of remote entities to maintain a fluid experience for nearby entities.</p>
+					<p style="font-size: 24px; line-height: 1.5em; color: #616161;">The biggest challenge in MMO games is to handle situations when a lot of players gather in tight spaces, like in a world, or a spawn and to do this without interrupting the gameplay.</p>
+					<p style="font-size: 24px; line-height: 1.5em; color: #616161;">To handle that, we have developed our own technology. More server resources are assigned to worlds that are more densely populated, and the live tweaking system changes the frequency of updates of entities to maintain a fluid experience for all players.</p>
 				</div>
 			</div>
 		</div>
@@ -84,7 +79,7 @@
 				</div>
 
 				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
-					<img src="//orig09.deviantart.net/8aa2/f/2012/206/4/f/minetrophy_by_ddant1100-d58lhtj.gif" width="100%"></img>
+					<img src="//orig13.deviantart.net/acae/f/2013/316/2/a/gavin_butt_by_suicidal_zombie-d6tyxz1.png" width="100%"></img>
 				</div>
 				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet graybox">
 					<h3>This Is a Game Changer</h3>
@@ -114,7 +109,7 @@
 			
 			<div style="height: 10px;"></div>
 			
-			<a ui-sref="app.play">
+			<a ui-sref="app.login">
 				<md-button class="md-raised">GET STARTED</md-button>
 			</a>
         </div>
