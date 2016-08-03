@@ -1,5 +1,5 @@
 application: minecraft-ly
-version: 20160801-25
+version: 20160804-4
 runtime: php55
 api_version: 1
 threadsafe: true
@@ -12,6 +12,7 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.css)
 
+# javascripts
 - url: /(.*\.js)
   mime_type: text/javascript
   static_files: static/\1
@@ -32,6 +33,7 @@ handlers:
   upload: index.html
   expiration: "0m"
 
+# angularjs template files
 - url: /templates/(.*\.html)
   mime_type: text/html
   static_files: templates/\1

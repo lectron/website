@@ -30,12 +30,12 @@
                 </div>
             </md-list-item>
             <md-list-item class="md-1-line" ui-sref="app.login" ng-show="$storage.loggedIn == 0">
-                <div class="md-list-item-text text-white">
+                <div class="md-list-item-text">
                     Login
                 </div>
             </md-list-item>
             <md-list-item class="md-1-line" ng-href="#" ng-click="logout()" ng-show="$storage.loggedIn != 0">
-                <div class="md-list-item-text text-white">
+                <div class="md-list-item-text">
                     Logout
                 </div>
             </md-list-item>
@@ -47,7 +47,7 @@
 
 
 <div flex layout="column">
-    <md-progress-linear ng-show="$storage.loading == 1" md-mode="indeterminate"></md-progress-linear>
+    <md-progress-linear ng-show="$storage.loading == 1"></md-progress-linear>
 
     <md-toolbar class="mdl-color--blue mdl-button--raised">
         <div class="md-toolbar-tools">
@@ -77,22 +77,18 @@
                 <md-button class="md-raised" aria-label="Login" ng-href="#" ng-click="loginOrlogout()" ng-class="{'md-accent':$storage.loggedIn == 0}">
                     <span ng-bind="$storage.loggedIn == 0 ? 'Login' : 'Logout'"></span>
                 </md-button>
-
             </div>
-
-
         </div>
     </md-toolbar>
-
-
-    <md-content layout="column" flex>
+	
+	
+    <md-content layout="column" flex="auto">
         <ui-view name="appContent">
 
-        </ui-view> 
+        </ui-view>
     </md-content>
-
-
-    <!-- Footer -->
+    
+	
     <footer class="mdl-mega-footer">
         <div class="mdl-mega-footer__middle-section">
             <div class="mdl-mega-footer__drop-down-section">
@@ -142,5 +138,5 @@
             </ul>
         </div>
     </footer>
-    <!-- /Footer -->
+	
 </div>
