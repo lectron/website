@@ -1,5 +1,5 @@
 application: minecraft-ly
-version: 20160804-17
+version: 20160805-1
 runtime: php55
 api_version: 1
 threadsafe: true
@@ -22,6 +22,11 @@ handlers:
 - url: /(.*\.(bmp|gif|ico|jpeg|jpg|png|gif))
   static_files: static/\1
   upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png|gif))
+
+- url: /(.*\.ttf)
+  mime_type: font/truetype
+  static_files: static/\1
+  upload: static/(.*\.ttf)
   
 - url: /auth/.*
   script: auth/public/index.php
