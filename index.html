@@ -12,7 +12,7 @@
 	<meta property="og:image" content="http://pre10.deviantart.net/196c/th/pre/f/2014/295/f/4/minecraft_pork_shop_by_mysticalpha-d83ryxo.jpg" />
 	<meta property="og:image" content="http://orig06.deviantart.net/acd3/f/2012/073/a/1/minecraft___isle_kakawa_by_ludolik-d4srw36.png" />
 	<meta property="og:image" content="http://pre14.deviantart.net/683b/th/pre/f/2013/004/c/2/layla_the_amphibious_dragon_by_acidictaco-d5qh6qi.png" />
-	<meta property="og:image" content="http://orig10.deviantart.net/a30e/f/2011/230/6/5/minecraft___colored_biomes_by_ludolik-d46zd1r.png" />
+	<meta property="og:image" content="http//i.imgur.com/10RJPfw.jpg" />
 	<meta property="og:image" content="http://orig03.deviantart.net/be02/f/2011/087/7/d/minecraft___cake_land_by_ludolik-d3cnkxq.png" />
     <base href="/">
 	<style type="text/css">
@@ -20,10 +20,24 @@
 		  display: none !important;
 		}
 	</style>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.0-rc4/angular-material.min.css" rel="stylesheet" type="text/css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.3/material.min.css" rel="stylesheet" type="text/css" />
 	<script src="//load.sumome.com/" data-sumo-site-id="b01a4dd899b0790baaf2a58711a4748cba340ee6491819fa89b9fc40b9442901"></script>
+	<script language="javascript">
+		angular
+			.module('MinecraftlyApp', ['ngMaterial'])
+			.controller('themeController', themeController)
+			.config(function($mdThemingProvider) {
+				$mdThemingProvider.theme('default') 
+					.primaryPalette('blue')
+					.accentPalette('purple')
+					.warnPalette('red');
+				});
+
+			function themeController ($scope) {            
+			}	  
+	</script> 
 </head>
 
 <body ng-cloak>

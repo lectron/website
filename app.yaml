@@ -1,5 +1,5 @@
 application: minecraft-ly
-version: 20160804-4
+version: 20160804-17
 runtime: php55
 api_version: 1
 threadsafe: true
