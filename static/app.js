@@ -9,6 +9,16 @@ var dependencies = [
 ];
 angular.module("MinecraftlyAppControllers", []);
 angular.module("MinecraftlyAppServices", []);
+angular.module('MinecraftlyApp', ['ngMaterial'])
+		.controller('themeController', themeController)
+		.config(function($mdThemingProvider) {
+			$mdThemingProvider.theme('default')
+				.primaryPalette('blue')
+				.accentPalette('purple')
+				.warnPalette('red');
+			});
+		function themeController ($scope) {
+		}
 angular.module('MinecraftlyApp', dependencies)
         .run(function ($window) {})
         .config(function ($stateProvider, $locationProvider, $urlRouterProvider, IntercomProvider) {
@@ -127,6 +137,16 @@ angular.module('MinecraftlyApp', dependencies)
                         views: {
                             'appContent': {
                                 templateUrl: "templates/features.html",
+                                controller: 'mainController'
+                            }
+                        }
+                    })
+                    .state('app.pricing', {
+                        cache: false,
+                        url: "/pricing",
+                        views: {
+                            'appContent': {
+                                templateUrl: "templates/pricing.html",
                                 controller: 'mainController'
                             }
                         }
