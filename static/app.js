@@ -141,12 +141,12 @@ angular.module('MinecraftlyApp', dependencies)
                             }
                         }
                     })
-                    .state('app.pricing', {
+                    .state('app.vip', {
                         cache: false,
-                        url: "/pricing",
+                        url: "/VIP",
                         views: {
                             'appContent': {
-                                templateUrl: "templates/pricing.html",
+                                templateUrl: "templates/vip.html",
                                 controller: 'mainController'
                             }
                         }
