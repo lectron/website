@@ -38,7 +38,7 @@ angular.module('MinecraftlyAppControllers')
 //                                        name: $localStorage.user.name,
 //                                        email: $localStorage.user.email,
 //                                        user_id: $localStorage.user.uuid,
-//                                        created_at: Date.now()
+                                        //created_at: Date.now()
 //                                    });
 //                                } else {
 //                                    $mdDialog.show(
