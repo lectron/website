@@ -151,23 +151,13 @@ angular.module('MinecraftlyApp', dependencies)
                             }
                         }
                     })
-                    .state('app.overview', {
-                        cache: false,
-                        url: "/overview",
-                        views: {
-                            'appContent': {
-                                templateUrl: "templates/overview.html",
-                                controller: 'mainController'
-                            }
-                        }
-                    })
 					.state('app.dashboard', {
                         cache: false,
                         url: "/dashboard",
                         views: {
                             'appContent': {
                                 templateUrl: "templates/dashboard.html",
-                                controller: 'profileController'
+                                controller: 'mainController'
                             }
                         }
                     })

@@ -7,6 +7,9 @@
             <md-list-item class="md-1-line" ui-sref="app.home">
                 <div class="md-list-item-text"><i class="material-icons">perm_identity</i> Home</div>
             </md-list-item>
+			<md-list-item class="md-1-line" ng-href="https://minecraftly.readme.io" target="_blank">
+                <div class="md-list-item-text"><i class="material-icons">description</i> Read Me</div>
+            </md-list-item>
             <md-list-item class="md-1-line" ui-sref="app.features">
                 <div class="md-list-item-text"><i class="material-icons">list</i> Features</div>
             </md-list-item>
@@ -45,6 +48,9 @@
                 <md-button aria-label="Home" ui-sref="app.home">
                     Home
                 </md-button>
+				<md-button aria-label="Read Me" ng-href="https://minecraftly.readme.io" target="_blank">
+                    Read Me
+                </md-button>
                 <md-button aria-label="Features" ui-sref="app.features">
                     Features
                 </md-button>
@@ -57,7 +63,7 @@
                 <md-button aria-label="Community" ng-href="https://www.reddit.com/r/minecraftly" target="_blank">
                     Forum
                 </md-button>
-                <md-button class="md-raised" aria-label="Login" ng-href="#" ng-click="loginOrlogout()" ng-class="{'md-accent':$storage.loggedIn == 0}">
+                <md-button class="md-raised" aria-label="Login" ng-href="login" ng-click="loginOrlogout()" ng-class="{'md-accent':$storage.loggedIn == 0}">
                     <span ng-bind="$storage.loggedIn == 0 ? 'Login' : 'Logout'"></span>
                 </md-button>
             </div>
