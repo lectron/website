@@ -1,8 +1,8 @@
-<md-sidenav md-component-id="leftNav" class="md-sidenav-left" md-whiteframe="4">
-    <md-toolbar md-colors="{background:'blue'}" class="mdl-button--raised">
-        <h1 class="md-toolbar-tools">Minecraftly</h1>
+<md-sidenav md-component-id="leftNav" class="md-sidenav-left" md-whiteframe="4" md-colors="{background:'grey-900'}">
+    <md-toolbar md-colors="{background:'grey-900'}" class="mdl-button--raised">
+        <img src="//i.imgur.com/of4ysaf.png" width="100%"/>
     </md-toolbar>
-    <md-content no-padding ng-controller="AppCtrl">
+    <md-content no-padding ng-controller="AppCtrl" md-colors="{background:'grey-900'}">
         <md-list flex>
             <md-list-item class="md-1-line" ui-sref="app.home">
                 <div class="md-list-item-text"><i class="material-icons">perm_identity</i> Home</div>
@@ -10,14 +10,14 @@
 			<md-list-item class="md-1-line" ng-href="https://minecraftly.readme.io" target="_blank">
                 <div class="md-list-item-text"><i class="material-icons">description</i> Documentation</div>
             </md-list-item>
-            <md-list-item class="md-1-line" ui-sref="app.features">
+            <!--<md-list-item class="md-1-line" ui-sref="app.features">
                 <div class="md-list-item-text"><i class="material-icons">list</i> Features</div>
-            </md-list-item>
+            </md-list-item>-->
             <md-list-item class="md-1-line" ui-sref="app.vip">
-                <div class="md-list-item-text"><font color="#42A5F5"><b><i class="material-icons">stars</i> Get VIP</b></font></div>
+                <div class="md-list-item-text"><font color="#42A5F5"><b><i class="material-icons">stars</i> Get VIP <i class="mc mc-goldapple"></i></b></font></div>
             </md-list-item>
             <md-list-item class="md-1-line" ng-href="http://shop.spreadshirt.com/minecraftly/" target="_blank">
-                <div class="md-list-item-text"><i class="material-icons">shopping_cart</i> Merchandise Shop</div>
+                <div class="md-list-item-text"><i class="material-icons">shopping_cart</i> Merchandise</div>
             </md-list-item>
             <md-list-item class="md-1-line" ng-href="https://www.reddit.com/r/minecraftly" target="_blank">
                 <div class="md-list-item-text"><i class="material-icons">forum</i> Forum</div>
@@ -35,14 +35,14 @@
 <div flex layout="column">
     <md-progress-linear ng-show="$storage.loading == 1"></md-progress-linear>
 
-    <md-toolbar md-colors="{background:'blue'}" class="mdl-button--raised">
+    <md-toolbar style="background-image: url(//i.imgur.com/W1C0kOT.jpg); background-size: initial; background-repeat: auto; background-color: #000;" class="mdl-button--raised">
         <div class="md-toolbar-tools">
             <md-button class="md-icon-button" aria-label="Settings" ng-click="openMenu()">
                 <md-icon md-font-set="material-icons"> menu </md-icon>
             </md-button>
-            <h2>
-                Minecraftly
-            </h2>
+            <a href="https://minecraftly.com">
+                <img src="//i.imgur.com/X3wNqNL.png" style="max-height: 25px;">
+            </a>
             <span flex></span>
             <div class="hide-sm hide-xs">
                 <md-button aria-label="Home" ui-sref="app.home">
@@ -51,19 +51,19 @@
 				<md-button aria-label="Read Me" ng-href="https://minecraftly.readme.io" target="_blank">
                     Documentation
                 </md-button>
-                <md-button aria-label="Features" ui-sref="app.features">
+                <!--<md-button aria-label="Features" ui-sref="app.features">
                     Features
-                </md-button>
+                </md-button>-->
                 <md-button aria-label="VIP" ui-sref="app.vip" md-colors="{color:'yellow'}">
-                    <b>Get VIP</b>
+                    <b><i class="mc mc-goldapple"/></i> Get VIP <i class="mc mc-grass"></i></b>
                 </md-button>
                 <md-button aria-label="Merchandise Shop" ng-href="http://shop.spreadshirt.com/minecraftly/" target="_blank">
-                    Merchandise Shop
+                    Merchandise
                 </md-button>
                 <md-button aria-label="Community" ng-href="https://www.reddit.com/r/minecraftly" target="_blank">
                     Forum
                 </md-button>
-                <md-button class="md-raised" aria-label="Login" ng-href="login" ng-click="loginOrlogout()" ng-class="{'md-accent':$storage.loggedIn == 0}">
+                <md-button class="md-raised" aria-label="Login" ng-href="login" ng-click="loginOrlogout()" ng-class="{'md-primary':$storage.loggedIn == 0}">
                     <span ng-bind="$storage.loggedIn == 0 ? 'Login' : 'Logout'"></span>
                 </md-button>
             </div>
@@ -82,9 +82,9 @@
         <div class="mdl-mega-footer__middle-section">
             <div class="mdl-mega-footer__drop-down-section">
                 <h1 class="mdl-mega-footer__heading"><b>® Minecraftly, Inc.</b></h1>
-                <img ng-src="//d0.awsstatic.com/Startups/General/activate%20logo%20thumbnail.png" width="125px"/>
+                <img ng-src="//i.imgur.com/TIrJLE4.png" width="125px"/>
                 <br/>
-                <img ng-src="https://developers.google.com/startups/images/logo-launch.svg" width="125px"/>
+                <img ng-src="//i.imgur.com/iPbj9PE.png" width="125px"/>
             </div>  
             <div class="mdl-mega-footer__drop-down-section">
                 <h1 class="mdl-mega-footer__heading">Stay Connected</h1>
@@ -101,7 +101,7 @@
                 <h1 class="mdl-mega-footer__heading">Useful</h1>
                 <ul class="mdl-mega-footer__link-list">
                     <li><a href="https://github.com/minecraftly/minecraftly/" target="_blank">GitHub</a></li>
-                    <li><a href="https://github.com/minecraftly/minecraftly/wiki" target="_blank">Wiki</a></li>
+                    <li><a href="https://minecraftly.readme.io/" target="_blank">Documentation</a></li>
                     <li><a href="https://www.bountysource.com/teams/minecraftly" target="_blank">Bounty</a></li>
                     <li><a ui-sref="app.faq">FAQ</a></li>
                     <li><a ui-sref="app.about">About</a></li>
