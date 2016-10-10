@@ -1,19 +1,12 @@
-    <div class="page-content">
-
-		<div style="background-image: url(//i.imgur.com/y9ThMvx.png); background-repeat: no-repeat; background-size: cover; background-color: #0091ea; padding-top: 1%; padding-bottom: 1%;padding-left:5%;padding-right:5%;">
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet graybox">
-					<img style='box-shadow: 0px 0px 5px #fff; border:2px solid #fff' src="//i.giphy.com/l0HlKBzFwOFfqLxF6.gif" width="100%"></img>
-				</div>
-				<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
-					<h3><font color="#fff">How to Play</font></h3>
-					
-					<p style="font-size: 24px; line-height: 2em; color: #eee;">1. Open Minecraft Multiplayer on Mac, Windows or Linux</p>
-					<p style="font-size: 24px; line-height: 2em; color: #eee;">2. Add <b><font color="#fff">m.ly</font></b> in the Server Address box</p>
-					<p style="font-size: 24px; line-height: 2em; color: #eee;">3. Click <i>Done</i></p>
-					<p><a href="http://mc.ly/demo" target="_blank">Don't know what Minecraft is yet?<br>Try it out for free.</a></p>
-				</div>
-			</div>
-		</div>
-		
+<div layout-wrap layout="row" ng-style="{'background-image':'url(//i.imgur.com/y9ThMvx.png)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-color': '#000', 'min-height': '100vh', 'padding-top': '10vh'}">
+	<div flex-gt-xs="50" flex-sm="100" flex-xs="100" ng-style="{'padding': '3vw'}">
+		<img ng-style="{'box-shadow': '0px 0px 5px #fff', 'border': '2px solid #fff'}" ng-src="//i.giphy.com/l0HlKBzFwOFfqLxF6.gif" width="100%"></img>
 	</div>
+	<div flex-gt-xs="50" flex-sm="100" ng-style="{'padding': '3vw', 'overflow': 'hidden', 'font-size': '18px', 'line-height': '2em', 'color': '#eee'}">
+		<h1>How to Play:</h1>			
+		<p>1. Open Minecraft Multiplayer on Mac, Windows or Linux</p>
+		<p>2. Add <b><font color="#fff">m.ly</font></b> in the Server Address box</p>
+		<p>3. Click <i>Done</i></p>
+		<a ng-href="http://mc.ly/demo" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Don't know what Minecraft is yet?<br/>Try it out for free!</a>
+	</div>
+</div>

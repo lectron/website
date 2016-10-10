@@ -1,5 +1,5 @@
 		$(document).ready(function () {
-			var interval = 1000;   //number of mili seconds between each call
+			var interval = 5000;   //number of mili seconds between each call
 			var refresh = function() {
 			$.getJSON("//mcapi.ca/query/m.ly/players",function(json){
 				  if (json.status !== true) {

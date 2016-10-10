@@ -1,8 +1,10 @@
-<div layout="column" layout-align="center center" layout-fill="layout-fill">	
+<div layout="column" layout-align="center center" layout-fill="layout-fill" ng-style="{'background-image': 'url(//i.imgur.com/v3rFpLy.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-color': '#000', 'min-height': '100vh', 'padding-top': '15vh', 'padding-bottom': '15vh'}">	
 	<div layout="column" class="loginBox">
-	<form ng-submit="login()">
-		<md-content layout="column" class="md-padding" ng-show="$storage.loggedIn == 0">
-			<h5>Login with your official <a href="https://minecraft.net/login" target="_blank">Minecraft.net</a> account</h5>
+	<md-card ng-submit="login()">
+		<md-card-header>
+			<h3>Login with your official <a ng-href="https://minecraft.net/login" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-700'}">Minecraft.net</a> account</h3>
+		</md-card-header>
+		<md-card-content layout="column" class="md-padding" ng-show="$storage.loggedIn == 0" ng-style="{'background-color': '#eee'}">
 		    <md-input-container>
 		        <label>Email Address</label>
 		        <input type="email" ng-model="user.email"/>
@@ -13,11 +15,15 @@
 		    </md-input-container>
 		    <div layout="row" layout-align="center center">
 		        <md-button class="md-primary md-raised" ng-click="login()" type="submit">Login</md-button>
+				<md-progress-circular mode="indeterminate" md-diameter="75" ng-show="$storage.loading == 1" ng-style="{'position': 'fixed', 'z-index': '100'}"></md-progress-circular>
 		    </div>
-		</md-content>
-		<md-content layout="column" class="md-padding" ng-show="$storage.loggedIn !== 0">
-			<h5>You are now logged in :)</h5>
-		</md-content>
-	</form>
+			<md-card-footer>
+				<a ng-href="https://account.mojang.com/password" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-700'}">Forgot Password?</a>
+			</md-card-footer>
+		</md-card-content>
+		<md-card-content layout="column" class="md-padding" ng-show="$storage.loggedIn !== 0">
+			<h3>You are now logged in :)</h3>
+		</md-card-content>
+	</md-card>
     </div>
 </div>

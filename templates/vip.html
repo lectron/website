@@ -1,35 +1,28 @@
-<div layout="column" style="align: center; text-align: center; background-image: url(//i.imgur.com/ax6T3iW.jpg); background-size: cover; background-color: #000; padding-top: 5%; padding-bottom: 5%; padding-left: 5%; padding-right: 5%; min-height: 480px;">
-	<div class="mdl-grid">
-		<h3><font color="#fff"><i class="material-icons">stars</i> Get VIP and gain amazing added features!</font></h3>
-	</div>
-	<div class="mdl-grid">
-		<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet graybox" style="float:left; max-width: 250px;">
+<div layout-wrap layout="column" ng-style="{'background-image':'url(//i.imgur.com/ax6T3iW.jpg)', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-color': '#000', 'min-height': '100vh', 'padding-top': '15vh'}">
+	<center>
+	<h2 md-colors="{color:'grey-200'}" ng-style="{'max-width': '480px', 'padding: '15vh'}">Get VIP and get more amazing features!</h2>
+	<div layout-gt-xs="row" layout-xs="column" ng-style="{'max-width': '720px'}">
+		<div flex-gt-xs="50" flex-xs="100" flex-xs="100">
 			<a ng-href="https://secure.minecraftly.com/checkout/packages/add/1028002/subscription" target="_blank"><img ng-src="//i.imgur.com/gbcpCTE.png"></a>
-			<h4><font color="white">1 Month</font></h4>
+			<h4><font color="white">Monthly</font></h4>
 			<p><font color="white">4.99</font></p>
 		</div>
-		<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet graybox" style="float:right; max-width: 250px;">
+		<div flex-gt-xs="50" flex-xs="100" flex-xs="100">
 			<a ng-href="https://secure.minecraftly.com/checkout/packages/add/996236/subscription" target="_blank"><img ng-src="//i.imgur.com/itWLJ4t.png"></a>
-			<h4><font color="white"><b>1 Year</b></font></h4>
+			<h4><font color="white">Yearly</font></h4>
 			<p><font color="white">19.99</font></p>
 			<p><font color="yellow"><b>Best Value</b></font></p>
 		</div>
 	</div>
+	</center>
 </div>
 
-<center>
-		<h2>VIP Rewards</h2>
-		<p>Here are what you get when you buy VIP subscriptions:</p>
-</center>
-
-<div class="mdl-grid" style="padding-top: 3%;padding-bottom: 3%;padding-left: 4%;padding-right: 4%;">
-	<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet graybox">
+<div layout-wrap layout="row" md-colors="{color:'grey-50'}" ng-style="{'background-color': '#000', 'overflow': 'hidden'}">
+	<div flex-gt-xs="50" flex-xs="100" ng-style="{'padding': '5vw'}">
+	<h2>VIP Rewards</h2>
+	<p>Here are what you get when you buy VIP subscriptions:</p>
 	<ul>
 		<li>Get billings and in-game support at anytime</li>
-		<li>2x multiplier</li>
-		<ul>
-			<li>Earn twice the amount of experience and money doing /jobs</li>
-		</ul>
 		<li>Have pets following you around</li>
 		<ul>
 			<li>Have any mobs as pets following you around</li>
@@ -64,10 +57,6 @@
 		<ul>
 			<li>VIP players automatically get new features before we release them to the public!</li>
 		</ul>
-		<li>VIP reserved slots</li>
-		<ul>
-			<li>Join the server even when we are full or under maintainance.</li>
-		</ul>
 		<li>Awesome VIP badge and chat highlights</li>
 		<ul>
 			<li>VIP members get an awesome VIP badge next to anything that has their name on it.</li>
@@ -76,27 +65,19 @@
 		</ul>
 	</ul>
 	</div>
-	<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet graybox">
-		<img ng-src="//i.giphy.com/3o6ZtrjsI49WWPkrSM.gif" width="100%" ng-cloak/>
-		<br><br>
-		<img ng-src="//i.giphy.com/l0MYHPkKBpbIFkkgw.gif" width="100%" ng-cloak/>
-		<br><br>
-		<img ng-src="//i.imgur.com/urOACpZ.png" width="100%" ng-cloak/>
+	
+	<div flex-gt-xs="50" flex-xs="100" layout="column">
+		<div flex="33">
+		<img ng-src="//i.giphy.com/3o6ZtrjsI49WWPkrSM.gif" width="100%" height="100%" ng-cloak/>
+		</div>
+		<div flex="33">
+		<img ng-src="//i.giphy.com/l0MYHPkKBpbIFkkgw.gif" width="100%" height="100%" ng-cloak/>
+		</div>
+		<div flex="33">
+		<img ng-src="//i.imgur.com/urOACpZ.png" width="100%" height="100%" ng-cloak/>
+		</div>
 	</div>
-</div>
-
-<!-- <div class="mdl-grid" style="padding-top: 3%;padding-bottom: 3%;padding-left: 4%;padding-right: 4%;">
-	<div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet redbox">
-		<img src="//i.imgur.com/urOACpZ.png" width="100%"/>
+	<div flex="100" ng-style="{'overflow': 'hidden'}">
+		<img ng-src="//i.imgur.com/9XImk2x.png" width="100%" height="100%" ng-cloak/>
 	</div>
-	<div class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet redbox">
-		<h3>Disguise as mobs and players</h3>
-		<p>
-			Turn yourself into any mob, or any another player</li>
-		</p>
-	</div>
-</div> -->
-
-<div>
-	<img ng-src="//i.imgur.com/9XImk2x.png" width="100%" ng-cloak/>
 </div>
