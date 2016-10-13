@@ -7,8 +7,8 @@
 			<md-list-item class="md-1-line" ui-sref="app.home">
 				<div class="md-list-item-text"><i class="material-icons">perm_identity</i> Home</div>
 			</md-list-item>
-			<md-list-item class="md-1-line" ng-href="https://minecraftly.readme.io" target="_blank">
-				<div class="md-list-item-text"><i class="material-icons">description</i> Documentation</div>
+			<md-list-item class="md-1-line" ui-sref="app.features">
+				<div class="md-list-item-text"><i class="material-icons">description</i> Features</div>
 			</md-list-item>
 			<md-list-item class="md-1-line" ui-sref="app.vip">
 				<div class="md-list-item-text"><font color="yellow"><i class="mc mc-goldapple"></i> <b>VIP</b></font></div>
@@ -42,8 +42,8 @@
 			<md-button aria-label="Home" ui-sref="app.home">
 				Home
 			</md-button>
-			<md-button aria-label="Read Me" ng-href="https://minecraftly.readme.io" target="_blank">
-				Documentation
+			<md-button aria-label="Features" ui-sref="app.features">
+				Features
 			</md-button>
 			<md-button aria-label="VIP" ui-sref="app.vip" md-colors="{color:'yellow'}">
 				<b>VIP</b>
@@ -65,7 +65,7 @@
 	<ui-view name="appContent">
 	</ui-view>
 </md-content>
-    
+
 <footer layout-wrap layout-gt-xs="row" layout-xs="column" md-colors="{background:'grey-900'}" ng-style="{'padding': '10vw', 'min-height': '75vh'}">
 	<div flex-gt-xs="25" flex-xs="100">
 		<p>® Minecraftly, Inc.</p>
