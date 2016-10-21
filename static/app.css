@@ -1,14 +1,18 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Jul 31, 2016, 2:03:27 PM
-    Author     : Luong Vu
-*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+		  display: none !important;
+		}
+		
+@font-face {
+		font-family: 'Minecraftia';
+		src: url('Minecraftia.ttf');
+		font-smooth: never !important;
+		-webkit-font-smoothing : none !important;
+	}
 
-.full-height
-{
-    min-height:100vh;
-}
+/*	
+h1,h2,h3,h4,h5,h6 {
+		font-family: 'Minecraftia' !important;
+		font-smooth: never !important;
+		-webkit-font-smoothing : none !important;
+	}
+*/

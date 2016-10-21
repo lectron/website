@@ -1,4 +1,4 @@
-var dependencies = [
+angular.module('MinecraftlyApp', [
     'ui.router',
     'ngAnimate',
     'ngMaterial',
@@ -6,20 +6,7 @@ var dependencies = [
     'ngStorage',
     'MinecraftlyAppControllers',
     'MinecraftlyAppServices'
-];
-angular.module("MinecraftlyAppControllers", []);
-angular.module("MinecraftlyAppServices", []);
-angular.module('MinecraftlyApp', ['ngMaterial'])
-		.controller('themeController', themeController)
-		.config(function($mdThemingProvider) {
-			$mdThemingProvider.theme('default')
-				.primaryPalette('blue')
-				.accentPalette('purple')
-				.warnPalette('red');
-			});
-		function themeController ($scope) {
-		}
-angular.module('MinecraftlyApp', dependencies)
+])
         .run(function ($window) {})
         .config(function ($stateProvider, $locationProvider, $urlRouterProvider, IntercomProvider) {
             IntercomProvider.init('t02jhyr0');
@@ -183,3 +170,5 @@ angular.module('MinecraftlyApp', dependencies)
                     });
             $urlRouterProvider.otherwise('/');
         });
+angular.module("MinecraftlyAppControllers", []);
+angular.module("MinecraftlyAppServices", []);

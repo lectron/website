@@ -1,65 +1,59 @@
 <md-sidenav md-component-id="leftNav" class="md-sidenav-left" md-whiteframe="4" md-colors="{background:'grey-900'}">
-	<md-toolbar md-colors="{background:'grey-900'}">
-		<img ng-src="//i.imgur.com/of4ysaf.png" width="100%">
-	</md-toolbar>
-	<md-content no-padding ng-controller="AppCtrl" md-colors="{background:'grey-900'}">
-		<md-list flex>
-			<md-list-item class="md-1-line" ui-sref="app.home">
-				<div class="md-list-item-text"><i class="material-icons">perm_identity</i> Home</div>
-			</md-list-item>
-			<md-list-item class="md-1-line" ui-sref="app.features">
-				<div class="md-list-item-text"><i class="material-icons">description</i> Features</div>
-			</md-list-item>
-			<md-list-item class="md-1-line" ui-sref="app.vip">
-				<div class="md-list-item-text"><font color="yellow"><i class="mc mc-goldapple"></i> <b>VIP</b></font></div>
-			</md-list-item>
-			<md-list-item class="md-1-line" ng-href="http://shop.spreadshirt.com/minecraftly/" target="_blank">
-				<div class="md-list-item-text"><i class="material-icons">shopping_cart</i> Merchandise</div>
-			</md-list-item>
-			<md-list-item class="md-1-line" ng-href="https://dm.reddit.com/r/minecraftly" target="_blank">
-				<div class="md-list-item-text"><i class="material-icons">forum</i> Community</div>
-			</md-list-item>
-			<md-list-item class="md-1-line" ui-sref="app.login" ng-show="$storage.loggedIn == 0">
-				<div class="md-list-item-text"><i class="material-icons">play_arrow</i> Login</div>
-			</md-list-item>
-			<md-list-item class="md-1-line" ng-href="#" ng-click="logout()" ng-show="$storage.loggedIn != 0">
-				<div class="md-list-item-text"><i class="material-icons">power_settings_new</i> Logout</div>
-			</md-list-item>
-		</md-list>
-	</md-content>
-</md-sidenav>
+		<md-toolbar md-colors="{background:'grey-900'}">
+			<img ng-src="//i.imgur.com/of4ysaf.png" width="100%">
+		</md-toolbar>
+		<md-content no-padding ng-controller="AppCtrl" md-colors="{background:'grey-900'}">
+			<md-list flex>
+				<md-list-item class="md-1-line" ui-sref="app.home">
+					<div class="md-list-item-text"><i class="material-icons">perm_identity</i> Home</div>
+				</md-list-item>
+				<md-list-item class="md-1-line" ui-sref="app.features">
+					<div class="md-list-item-text"><i class="material-icons">description</i> Features</div>
+				</md-list-item>
+				<md-list-item class="md-1-line" ui-sref="app.vip">
+					<div class="md-list-item-text"><font color="yellow"><i class="mc mc-goldapple"></i> <b>VIP</b></font></div>
+				</md-list-item>
+				<md-list-item class="md-1-line" ng-href="https://dm.reddit.com/r/minecraftly" target="_blank">
+					<div class="md-list-item-text"><i class="material-icons">forum</i> Community</div>
+				</md-list-item>
+				<md-list-item class="md-1-line" ui-sref="app.login" md-colors="{background:'green-500'}" ng-show="$storage.loggedIn == 0">
+					<div class="md-list-item-text"><i class="material-icons">play_arrow</i> Login</div>
+				</md-list-item>
+				<md-list-item class="md-1-line" ng-href="#" ng-click="logout()" ng-show="$storage.loggedIn != 0">
+					<div class="md-list-item-text"><i class="material-icons">power_settings_new</i> Logout</div>
+				</md-list-item>
+			</md-list>
+		</md-content>
+	</md-sidenav>
 
-<md-toolbar ng-style="{'background-color': 'transparent', 'position': 'absolute'}">
-	<div class="md-toolbar-tools">
-		<md-button class="hide-gt-sm md-icon-button" aria-label="Menu" ng-click="openMenu()">
-			<md-icon md-font-set="material-icons"> menu </md-icon>
-		</md-button>
-		<a ng-href="https://minecraftly.com">
-			<img ng-src="//i.imgur.com/X3wNqNL.png" ng-style="{'max-height': '25px'}">
-		</a>
-		<span flex></span>
-		<div class="hide-sm hide-xs">
-			<md-button aria-label="Home" ui-sref="app.home">
-				Home
+	<md-toolbar ng-style="{'background-color': '#000'}">
+		<div class="md-toolbar-tools">
+			<md-button class="hide-gt-sm md-icon-button" aria-label="Menu" ng-click="openMenu()">
+				<md-icon md-font-set="material-icons"> menu </md-icon>
 			</md-button>
-			<md-button aria-label="Features" ui-sref="app.features">
-				Features
-			</md-button>
-			<md-button aria-label="VIP" ui-sref="app.vip" md-colors="{color:'yellow'}">
-				<b>VIP</b>
-			</md-button>
-			<md-button aria-label="Merchandise Shop" ng-href="http://shop.spreadshirt.com/minecraftly/" target="_blank">
-				Merchandise
-			</md-button>
-			<md-button aria-label="Community" ng-href="https://dm.reddit.com/r/minecraftly" target="_blank">
-				Community
-			</md-button>
-			<md-button class="md-raised" aria-label="Login" ng-href="login" ng-click="loginOrlogout()" ng-class="{'md-primary':$storage.loggedIn == 0}">
-				<span ng-bind="$storage.loggedIn == 0 ? 'Login' : 'Logout'"></span>
-			</md-button>
+			<a ng-href="https://minecraftly.com">
+				<img ng-src="//i.imgur.com/X3wNqNL.png" ng-style="{'max-height': '25px'}">
+			</a>
+			<span flex></span>
+			<div class="hide-sm hide-xs">
+				<md-button aria-label="Home" ui-sref="app.home">
+					Home
+				</md-button>
+				<md-button aria-label="Features" ui-sref="app.features">
+					Features
+				</md-button>
+				<md-button aria-label="VIP" ui-sref="app.vip" md-colors="{color:'yellow'}">
+					<b>VIP</b>
+				</md-button>
+				<md-button aria-label="Community" ng-href="https://dm.reddit.com/r/minecraftly" target="_blank">
+					Community
+				</md-button>
+				<md-button class="md-raised" md-colors="{background:'green-500'}" aria-label="Login" ng-href="login" ng-click="loginOrlogout()" ng-class="{'md-primary':$storage.loggedIn == 0}">
+					<span ng-bind="$storage.loggedIn == 0 ? 'Login' : 'Logout'"></span>
+				</md-button>
+			</div>
 		</div>
-	</div>
-</md-toolbar>
+	</md-toolbar>
 
 <md-content flex md-no-momentum>
 	<ui-view name="appContent">
@@ -67,37 +61,37 @@
 </md-content>
 
 <footer layout-wrap layout-gt-xs="row" layout-xs="column" md-colors="{background:'grey-900'}" ng-style="{'padding': '10vw', 'min-height': '75vh'}">
-	<div flex-gt-xs="25" flex-xs="100">
-		<p>® Minecraftly, Inc.</p>
-		<p><img ng-src="//i.imgur.com/iPbj9PE.png" width="125px" ng-cloak/></p>
-		<p><a ui-sref="app.terms" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Terms</a></p>
-		<p><a ui-sref="app.privacy" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Privacy</a></p>
-	</div>  
-	<div flex-gt-xs="25" flex-xs="100">
-		<p>Follow Us</p>
-		<p><a ng-href="http://blog.minecraftly.com" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Blog</a></p>
-		<p><a ng-href="https://www.facebook.com/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Facebook</a></p>
-		<p><a ui-sref="app.team" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Team</a></p>
-		<p><a ng-href="https://twitter.com/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Twitter</a></p>
-		<p><a ng-href="https://www.youtube.com/channel/UCVieXH0Cl7JSHVVd-wAA1hg" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">YouTube</a></p>
-		<p><a ng-href="https://plug.dj/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Plug.DJ</a></p>
-	</div>  	
-	<div flex-gt-xs="25" flex-xs="100">
-		<p>Useful</p>
-		<p><a ng-href="https://github.com/minecraftly/minecraftly/" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">GitHub</a></p>
-		<p><a ng-href="https://minecraftly.readme.io/" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Docs</a>
-		<p><a ng-href="https://www.bountysource.com/teams/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Bounty</a></p>
-		<p><a ui-sref="app.faq" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">FAQ</a></p>
-		<p><a ui-sref="app.about" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">About</a></p>
-		<p><a ng-href="https://www.reddit.com/r/minecraftly/" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Reddit</a></p>
-	</div>  	
-	<div flex-gt-xs="25" flex-xs="100">
-		<p>Others</p>
-		<p><a ui-sref="app.vip" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">VIP</a></p>
-		<p><a ng-href="https://www.linkedin.com/company/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">LinkedIn</a></p>
-		<p><a ng-href="https://angel.co/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">AngelList</a></p>
-		<p><a ng-href="http://mc.ly/presskit" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Press Kit</a></p>
-		<p><a ui-sref="app.vote" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Vote</a></p>
-		<p><a ng-href="http://www.minecraftforum.net/forums/servers/pc-servers/2170660" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">MC Forum</a></p>
-	</div>
-</footer>
+		<div flex-gt-xs="25" flex-xs="100">
+			<p>® Minecraftly, Inc.</p>
+			<p><img ng-src="//i.imgur.com/iPbj9PE.png" width="125px" ng-cloak/></p>
+			<p><a ui-sref="app.terms" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Terms</a></p>
+			<p><a ui-sref="app.privacy" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Privacy</a></p>
+		</div>  
+		<div flex-gt-xs="25" flex-xs="100">
+			<p>Follow Us</p>
+			<p><a ng-href="http://blog.minecraftly.com" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Blog</a></p>
+			<p><a ng-href="https://www.facebook.com/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Facebook</a></p>
+			<p><a ui-sref="app.team" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Team</a></p>
+			<p><a ng-href="https://twitter.com/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Twitter</a></p>
+			<p><a ng-href="https://www.youtube.com/channel/UCVieXH0Cl7JSHVVd-wAA1hg" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">YouTube</a></p>
+			<p><a ng-href="https://plug.dj/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Plug.DJ</a></p>
+		</div>  	
+		<div flex-gt-xs="25" flex-xs="100">
+			<p>Useful</p>
+			<p><a ng-href="https://github.com/minecraftly/minecraftly/" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">GitHub</a></p>
+			<p><a ng-href="https://minecraftly.readme.io/" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Docs</a>
+			<p><a ng-href="https://www.bountysource.com/teams/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Bounty</a></p>
+			<p><a ui-sref="app.faq" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">FAQ</a></p>
+			<p><a ui-sref="app.about" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">About</a></p>
+			<p><a ng-href="https://www.reddit.com/r/minecraftly/" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Reddit</a></p>
+		</div>  	
+		<div flex-gt-xs="25" flex-xs="100">
+			<p>Others</p>
+			<p><a ui-sref="app.vip" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">VIP</a></p>
+			<p><a ng-href="https://www.linkedin.com/company/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">LinkedIn</a></p>
+			<p><a ng-href="https://angel.co/minecraftly" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">AngelList</a></p>
+			<p><a ng-href="http://mc.ly/presskit" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Press Kit</a></p>
+			<p><a ui-sref="app.vote" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">Vote</a></p>
+			<p><a ng-href="http://www.minecraftforum.net/forums/servers/pc-servers/2170660" target="_blank" ng-style="{'text-decoration': 'none'}" md-colors="{color:'blue-500'}">MC Forum</a></p>
+		</div>
+	</footer>

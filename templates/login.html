@@ -7,11 +7,11 @@
 		<md-card-content layout="column" class="md-padding" ng-show="$storage.loggedIn == 0" ng-style="{'background-color': '#eee'}">
 		    <md-input-container>
 		        <label>Email Address</label>
-		        <input type="email" ng-model="user.email"/>
+		        <input type="email" ng-model="user.email" ng-required="true"/>
 		    </md-input-container>
 		    <md-input-container>
 		        <label>Password</label>
-		        <input type="password" ng-model="user.password"/>
+		        <input type="password" ng-model="user.password" ng-required="true"/>
 		    </md-input-container>
 		    <div layout="row" layout-align="center center">
 		        <md-button class="md-primary md-raised" ng-click="login()" type="submit">Login</md-button>

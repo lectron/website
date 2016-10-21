@@ -7,30 +7,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="The largest virtual universe ever created using Minecraft. Billions of times larger than Earth, with infinite amount of worlds, for infinite amount of players, all in one universe.">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<meta property="og:url" content="https://minecraftly.com">
+	<meta property="og:type" content="website">
 	<meta property="og:image" content="https://i.imgur.com/10RJPfw.jpg" />
+	<meta property="og:title" content="Minecraftly Universe">
+	<meta property="og:site_name" content="Minecraftly Universe">
+	<meta property="og:description" content="The largest virtual universe ever created using Minecraft.">
 	<base href="/">
-	<link href="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css" rel="stylesheet" type="text/css" />
-	<style type="text/css">
-		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-		  display: none !important;
-		}
-	</style>
-	<style type="text/css">
-	@font-face {
-		font-family: 'Minecraftia';
-		src: url('Minecraftia.ttf');
-		font-smooth: never !important;
-		-webkit-font-smoothing : none !important;
-	}
-	</style>
-	<style type="text/css">
-	h1,h2,h3,h4,h5,h6 {
-		font-family: 'Minecraftia' !important;
-		font-smooth: never !important;
-		-webkit-font-smoothing : none !important;
-	}
-	</style>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link ng-href="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css" rel="stylesheet" type="text/css" />
+	<link ng-href="app.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
 	<link href="https://minecraftly.github.io/emoji/emoji.css" rel="stylesheet">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js" type="text/javascript"></script>
@@ -47,7 +34,10 @@
 	<script src="online.js" type="text/javascript"></script>-->
 </head>
 
-<body ui-view class="full-height" autoscroll="true" ng-style="{'font-family': 'Minecraftia'}">
+<body autoscroll="true" ng-style="{'font-family': 'Minecraftia'}">
+	
+	<div ui-view ng-cloak></div>
+	
 </body>
 
 </html>
