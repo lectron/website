@@ -108,6 +108,16 @@ angular.module('MinecraftlyApp', [
                             }
                         }
                     })
+					.state('app.why', {
+                        cache: false,
+                        url: "/why",
+                        views: {
+                            'appContent': {
+                                templateUrl: "templates/why.html",
+                                controller: 'mainController'
+                            }
+                        }
+                    })
                     .state('app.faq', {
                         cache: false,
                         url: "/faq",

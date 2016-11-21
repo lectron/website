@@ -5,14 +5,51 @@
 @font-face {
 		font-family: 'Minecraftia';
 		src: url('Minecraftia.ttf');
-		font-smooth: never !important;
-		-webkit-font-smoothing : none !important;
 	}
 
-/*	
-h1,h2,h3,h4,h5,h6 {
-		font-family: 'Minecraftia' !important;
-		font-smooth: never !important;
-		-webkit-font-smoothing : none !important;
-	}
-*/
+h1 {
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: 0.075em;
+  line-height: 1.75em; }
+
+h2 {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.075em;
+  line-height: 1.75em; }
+
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.075em;
+  line-height: 1.75em; }
+
+h4 {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.075em;
+  line-height: 1.75em; }
+
+h5 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.075em;
+  line-height: 1.75em; }
+
+h6 {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.075em;
+  line-height: 1.75em; }
+
+p,u,li {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.075em;
+  line-height: 1.75em; }
+  
+a {
+  text-decoration: none;
+  color: #2196F3;
+  }
