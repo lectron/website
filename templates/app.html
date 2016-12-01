@@ -24,6 +24,9 @@
 				<md-list-item class="md-1-line" ng-href="https://dm.reddit.com/r/minecraftly" target="_blank">
 					<div class="md-list-item-text"><i class="material-icons">forum</i> Community</div>
 				</md-list-item>
+				<md-list-item class="md-1-line" ng-href="http://mc.ly/docs" target="_blank">
+					<div class="md-list-item-text"><i class="material-icons">book</i> Docs</div>
+				</md-list-item>
 				<md-list-item class="md-1-line" ui-sref="app.login" md-colors="{background:'green-500'}" ng-show="$storage.loggedIn == 0">
 					<div class="md-list-item-text"><i class="material-icons">play_arrow</i> Login</div>
 				</md-list-item>
@@ -62,6 +65,9 @@
 				<md-button aria-label="Community" ng-href="https://dm.reddit.com/r/minecraftly" target="_blank">
 					Community
 				</md-button>
+				<md-button aria-label="Community" ng-href="http://mc.ly/docs" target="_blank">
+					Docs
+				</md-button>
 				<md-button class="md-raised" md-colors="{background:'green-500'}" aria-label="Login" ng-href="login" ng-click="loginOrlogout()" ng-class="{'md-primary':$storage.loggedIn == 0}">
 					<span ng-bind="$storage.loggedIn == 0 ? 'Login' : 'Logout'"></span>
 				</md-button>
@@ -91,7 +97,7 @@
 		</div>  	
 		<div flex-gt-xs="25" flex-xs="100">
 			<p>Useful</p>
-			<p><a ng-href="https://github.com/minecraftly/minecraftly/" target="_blank">GitHub</a></p>
+			<p><a ng-href="https://github.com/minecraftly" target="_blank">GitHub</a></p>
 			<p><a ng-href="https://minecraftly.readme.io/" target="_blank">Docs</a>
 			<p><a ng-href="https://www.bountysource.com/teams/minecraftly" target="_blank">Bounty</a></p>
 			<p><a ui-sref="app.faq">FAQ</a></p>
